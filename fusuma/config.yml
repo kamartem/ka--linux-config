@@ -1,0 +1,45 @@
+swipe:
+  3:
+    left:
+      sendkey: "LEFTALT+RIGHT" # history back
+    right:
+      sendkey: "LEFTALT+LEFT" # history forward
+    up:
+      sendkey: "LEFTCTRL+T" # open new tab
+    down:
+      sendkey: "LEFTCTRL+W" # close tab
+
+  4:
+    left:
+      sendkey: "LEFTALT+F1"
+    up:
+      sendkey: "LEFTCTRL+LEFTALT+DOWN" # Switch to previous workspace
+    down:
+      sendkey: "LEFTCTRL+LEFTALT+UP" # Switch to next workspace
+
+pinch:
+  2:
+    in:
+      threshold: 0.05
+      interval: 1
+      sendkey: "LEFTCTRL+EQUAL"
+    out:
+      threshold: 0.05
+      interval: 1
+      sendkey: "LEFTCTRL+MINUS"
+
+plugin:
+  inputs:
+    libinput_command_input:
+      enable-tap: true
+      verbose: true
+      enable-dwt: true # disable tap while typing
+      show-keycodes: true
+
+threshold:
+  swipe: 0.7
+  pinch: 0.3
+
+interval:
+  swipe: 0.2
+  pinch: 0.5

@@ -8,25 +8,51 @@ swipe:
       sendkey: "LEFTCTRL+T" # open new tab
     down:
       sendkey: "LEFTCTRL+W" # close tab
+#  2:
+#    left:
+#      command: 'xdotool key alt+Right' # History forward
+#    right:
+#      command: 'xdotool key alt+Left' # History back
+#    up:
+#      command: 'xdotool key ctrl+t'
+#    down:
+#      command: 'xdotool key ctrl+w'
 
   4:
     left:
+      threshold: 1
+      interval: 1
       sendkey: "LEFTALT+F1"
     up:
+      interval: 0.5
       sendkey: "LEFTCTRL+LEFTALT+DOWN" # Switch to previous workspace
     down:
+      interval: 0.5
       sendkey: "LEFTCTRL+LEFTALT+UP" # Switch to next workspace
 
 pinch:
+#  2:
+#    in:
+#      command: 'xdotool keydown ctrl click 4 keyup ctrl' # Zoom in
+#    out:
+#      command: 'xdotool keydown ctrl click 5 keyup ctrl' # Zoom out
   2:
     in:
-      threshold: 0.05
-      interval: 1
+      threshold: 0.1
+      interval: 0.8
       sendkey: "LEFTCTRL+EQUAL"
+      #command: 'xdotool key ctrl+equal'
     out:
-      threshold: 0.05
-      interval: 1
+      threshold: 0.1
+      interval: 0.8
       sendkey: "LEFTCTRL+MINUS"
+      #command: 'xdotool key ctrl+minus'
+
+#hold:
+#  3:
+#    sendkey: "LEFTALT+F7" # drag current window
+#    threshold: 3
+#    interval: 3
 
 plugin:
   inputs:
